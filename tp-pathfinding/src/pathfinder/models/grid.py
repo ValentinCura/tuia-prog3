@@ -111,3 +111,11 @@ class Grid:
 
     def __repr__(self) -> str:
         return f"Grid([[...], ...], {self.initial}, {self.end})"
+
+
+    def calculate_distance(self, node: Node) -> int:
+        x_distance = abs(self.end[0] - node.state[0])
+        y_distance = abs(self.end[1] - node.state[1])
+        distance = x_distance + y_distance
+        return distance
+    
